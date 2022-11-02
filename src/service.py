@@ -35,8 +35,6 @@ def String(x):
         return None
     if x == "null":
         return None
-    if x == "False":
-        return None
     if x == "None":
         return None
     return x
