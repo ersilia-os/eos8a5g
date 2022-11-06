@@ -1,28 +1,27 @@
-# Model title
+# MolBloom to check purchasability of a molecule
 ## Model identifiers
-- Slug:
-- Ersilia ID: 
-- Tags: 
+- Slug: molbloom
+- Ersilia ID: eos8a5g
+- Tags: Purchasable, ZINC, Commercial
 
 # Model description
-Short description of the model in one or two sentences.
-- Input:
-- Output: {unit and description of output) 
-- Model type: (Regression or Classification)
-- Training set: (number of compounds and link to the training data)
-- Mode of training: (is it pretrained? that is were the checkpoints downloaded and used to train the model? or is it retrained? that is trained from scratch with an updated data)
+A molecular Bloom filter is used to query the ZINC20 database. ZINC20 is an ultra-large library of chemical compounds, including, among many other commercial libraries, the Enamine REAL collection.
+- Input: Single Compound (SMILES)
+- Output: Purchasable. It returns a boolean (True/False) suggesting whether the molecule is commercially available or not.
+- Model type: Classification
+- Training set: ZINC20 dataset (https://zinc20.docking.org)
+- Mode of training: Pretrained
 
 # Source code
 Cite the source publication.
-- Code: include link to the source code
-- Checkpoints: include the link to the checkpoints used if model is a pretrained model
+- Code: https://github.com/whitead/molbloom
+- Checkpoints: N/A
 
 # License
 State the licences used which are GPL v3 license used by Ersilia and the license used by the source code, if any exists. Use [this guide]() on how to license new models to be incorporated into Ersilia's model hub 
 
 # History 
-- State the date when the model was downloaded and incorporated into Ersilia.
-- List any essential steps/modifications to the original code
+- The model was incorporated into Ersilia on 11/01/2022
 
 # About us
 The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
