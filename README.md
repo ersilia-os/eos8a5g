@@ -23,6 +23,11 @@ This model uses a Bloom filter to query the ZINC20 database to identify if a mol
 * [Source Code](https://github.com/whitead/molbloom)
 * Ersilia contributor: [Amna-28](https://github.com/Amna-28)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos8a5g)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos8a5g) (AMD64, ARM64)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://github.com/whitead/molbloom/blob/main/CITATION.cff) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).

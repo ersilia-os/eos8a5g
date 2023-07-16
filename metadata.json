@@ -27,5 +27,11 @@
     "Publication": "https://github.com/whitead/molbloom/blob/main/CITATION.cff",
     "Source Code": "https://github.com/whitead/molbloom",
     "License": "MIT",
-    "Contributor": "Amna-28"
+    "Contributor": "Amna-28",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8a5g",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ]
 }
