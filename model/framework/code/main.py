@@ -20,6 +20,6 @@ outputs = [ buy(smiles) for smiles in smiles_list ]
 # write output in a .csv file
 with open(output_file, "w") as f:
     writer = csv.writer(f)
-    writer.writerow(["value"]) # header
+    writer.writerow(["purchasable"]) # header
     for o in outputs:
         writer.writerow([o])
