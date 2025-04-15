@@ -1,0 +1,42 @@
+name: Build dev image
+
+on:
+  workflow_run:
+    workflows: ["Test source and upload to S3"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  upload-ersilia-pack:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ersilia-os/ersilia-model-workflows/.github/workflows/upload-ersilia-pack.yml@main
+    with:
+      repo_name: ${{ github.event.repository.name }}
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+  # BentoML Multistage Build (runs if Ersilia Pack fails)
+  upload-bentoml-multistage:
+    needs: upload-ersilia-pack
+    if: ${{ needs.upload-ersilia-pack.result == 'failure' }}
+    uses: ersilia-os/ersilia-model-workflows/.github/workflows/upload-bentoml.yml@main
+    with:
+      repo_name: ${{ github.event.repository.name }}
+      version: multistage-condapack
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+  # BentoML Legacy Build (runs only if both previous jobs fail)
+  upload-bentoml-legacy:
+    needs: [upload-ersilia-pack, upload-bentoml-multistage]
+    if: ${{ needs.upload-ersilia-pack.result == 'failure' && needs.upload-bentoml-multistage.result == 'failure' }}
+    uses: ersilia-os/ersilia-model-workflows/.github/workflows/upload-bentoml.yml@main
+    with:
+      repo_name: ${{ github.event.repository.name }}
+      version: legacy
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}

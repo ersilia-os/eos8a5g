@@ -15,7 +15,7 @@ with open(input_file, "r") as f:
     smiles_list = [r[0] for r in reader]
     
 # run model
-outputs = [ buy(smiles) for smiles in smiles_list ]
+outputs = [buy(smiles) for smiles in smiles_list ]
 
 # write output in a .csv file
 with open(output_file, "w") as f:

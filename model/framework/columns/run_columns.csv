@@ -1,2 +1,2 @@
 name,type,direction,description
-purchasable,string,,If the molecule is purchasable (True) or not (False)
+purchasable,string,,Whether the molecule is purchasable (True) or not (False)
