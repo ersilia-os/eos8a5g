@@ -3,22 +3,19 @@
     "Slug": "molbloom",
     "Status": "Ready",
     "Title": "MolBloom: molecule purchasability in ZINC20",
-    "Description": "This model uses a Bloom filter to query the ZINC20 database to identify if a molecule is purchasable. A bloom filter is a space-efficient probabilistic data structure to identify whether an element is in a given set. Due to the nature of bloom filters, false negatives are not possible (i.e if the model returns False, the molecule is not purchasable). As stated by the author, if the model returns True the molecule is purchasable with an error rate of 0.0003 (according to the ZINC20 catalog).\n",
+    "Description": "This model uses a Bloom filter to query the ZINC20 database to identify if a molecule is purchasable. A bloom filter is a space-efficient probabilistic data structure to identify whether an element is in a given set. Due to the nature of bloom filters, false negatives are not possible (i.e if the model returns False, the molecule is not purchasable). As stated by the author, if the model returns True the molecule is purchasable with an error rate of 0.0003 (according to the ZINC20 catalog).",
+    "Deployment": [
+        "Local"
+    ],
     "Source": "Local",
     "Source Type": "External",
+    "Task": "Annotation",
+    "Subtask": "Property calculation or prediction",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
     "Input Dimension": 1,
-    "Task": "Annotation",
-    "Subtask": "Property calculation or prediction",
-    "Biomedical Area": [
-        "Any"
-    ],
-    "Target Organism": [
-        "Not Applicable"
-    ],
+    "Input Shape": "Single",
     "Output": [
         "Boolean"
     ],
@@ -29,20 +26,23 @@
         "ZINC",
         "Compound generation"
     ],
-    "Publication": "https://jcheminf.biomedcentral.com/articles/10.1186/s13321-023-00765-1",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Publication Type": "Peer reviewed",
     "Publication Year": 2023,
+    "Publication": "https://jcheminf.biomedcentral.com/articles/10.1186/s13321-023-00765-1",
     "Source Code": "https://github.com/whitead/molbloom",
     "License": "MIT",
     "Contributor": "Amna-28",
     "Incorporation Date": "2022-11-02",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8a5g",
     "Docker Architecture": [
         "AMD64",
         "ARM64"
-    ],
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip",
-    "Deployment": [
-        "Local"
     ]
 }
