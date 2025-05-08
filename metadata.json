@@ -41,12 +41,14 @@
     "Incorporation Date": "2022-11-02",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8a5g",
-    "Docker Architecture": [
-        "AMD64",
-        "ARM64"
-    ],
+    "Docker Architecture": "AMD64",
     "Model Size": 1.0,
     "Environment Size": 298.0,
-    "Image Size": 224.2,
+    "Image Size": 224.07,
+    "Computational Performance 1": 31.04,
+    "Computational Performance 2": 21.68,
+    "Computational Performance 3": 20.74,
+    "Computational Performance 4": 49.95,
+    "Computational Performance 5": 182.88,
     "Docker Pack Method": "FastAPI"
 }
