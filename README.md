@@ -35,14 +35,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos8a5g](https://hub.docker.com/r/ersiliaos/eos8a5g)
-- **Docker Architecture:** `AMD64`, `ARM64`
+- **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `298`
-- **Image Size (Mb):** `224.2`
+- **Image Size (Mb):** `224.07`
 
+**Computational Performance (seconds):**
+- 10 inputs: `31.04`
+- 100 inputs: `20.74`
+- 10000 inputs: `182.88`
 
 ### References
 - **Source Code**: [https://github.com/whitead/molbloom](https://github.com/whitead/molbloom)
