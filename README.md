@@ -43,10 +43,6 @@ Below are the **Output Columns** of the model:
 - **Environment Size (Mb):** `297`
 - **Image Size (Mb):** `224.2`
 
-**Computational Performance (seconds):**
-- 4 inputs: `30.71`
-- 20 inputs: `20.85`
-- 100 inputs: `20.31`
 
 ### References
 - **Source Code**: [https://github.com/whitead/molbloom](https://github.com/whitead/molbloom)
