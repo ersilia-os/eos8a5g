@@ -2,8 +2,7 @@
 
 This model uses a Bloom filter to query the ZINC20 database to identify if a molecule is purchasable. A bloom filter is a space-efficient probabilistic data structure to identify whether an element is in a given set. Due to the nature of bloom filters, false negatives are not possible (i.e if the model returns False, the molecule is not purchasable). As stated by the author, if the model returns True the molecule is purchasable with an error rate of 0.0003 (according to the ZINC20 catalog).
 
-This model was incorporated on 2022-11-02.
-
+This model was incorporated on 2022-11-02.Last packaged on 2025-10-14.
 
 ## Information
 ### Identifiers
@@ -42,12 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `380`
-- **Image Size (Mb):** `224.07`
+- **Image Size (Mb):** `307.31`
 
 **Computational Performance (seconds):**
-- 10 inputs: `31.04`
-- 100 inputs: `20.74`
-- 10000 inputs: `182.88`
+- 10 inputs: `28.89`
+- 100 inputs: `18.91`
+- 10000 inputs: `23.45`
 
 ### References
 - **Source Code**: [https://github.com/whitead/molbloom](https://github.com/whitead/molbloom)
