@@ -4,6 +4,7 @@ This model uses a Bloom filter to query the ZINC20 database to identify if a mol
 
 This model was incorporated on 2022-11-02.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos8a5g`
@@ -13,7 +14,7 @@ This model was incorporated on 2022-11-02.
 - **Task:** `Annotation`
 - **Subtask:** `Property calculation or prediction`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `ZINC`, `Compound generation`
 
 ### Input
