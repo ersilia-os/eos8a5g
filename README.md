@@ -50,7 +50,7 @@ Below are the **Output Columns** of the model:
 
 ### References
 - **Source Code**: [https://github.com/whitead/molbloom](https://github.com/whitead/molbloom)
-- **Publication**: [https://jcheminf.biomedcentral.com/articles/10.1186/s13321-023-00765-1](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-023-00765-1)
+- **Publication**: [https://doi.org/10.1186/s13321-023-00765-1](https://doi.org/10.1186/s13321-023-00765-1)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2023`
 - **Ersilia Contributor:** [Amna-28](https://github.com/Amna-28)
