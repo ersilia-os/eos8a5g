@@ -1,6 +1,6 @@
 # MolBloom: molecule purchasability in ZINC20
 
-Reports whether a molecule can be purchased from the ZINC20 catalogue. MolBloom, by Medina and White, answers this with a Bloom filter, a probabilistic structure that stores set membership in a few megabytes instead of a full database, making the check instantaneous and offline. The trade-off is inherent to the method: a compound reported as absent is definitely absent, while one reported as available carries a small chance of being a false positive.
+This model uses a Bloom filter to query the ZINC20 database to identify if a molecule is purchasable. A bloom filter is a space-efficient probabilistic data structure to identify whether an element is in a given set. Due to the nature of bloom filters, false negatives are not possible (i.e if the model returns False, the molecule is not purchasable). As stated by the author, if the model returns True the molecule is purchasable with an error rate of 0.0003 (according to the ZINC20 catalog).
 
 This model was incorporated on 2022-11-02.Last packaged on 2025-10-14.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2022-11-02.Last packaged on 2025-10-14.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Whether the molecule is purchasable from ZINC20, reported as True or False.
+- **Interpretation:** It returns a boolean (True/False) suggesting whether the molecule is commercially available or not.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
