@@ -2,7 +2,7 @@
 
 Reports whether a molecule is purchasable by testing it against the in-stock subset of ZINC20, some 9.2 million compounds held as a Bloom filter rather than a database. Medina and White showed that hashing canonical SMILES into such a filter gives sub-millisecond, fully offline membership checks at a fraction of the storage a catalogue would need. The trade-off is one-sided, since a compound reported as absent is certainly absent, while one reported as available carries a measured false-positive rate of 0.0003.
 
-This model was incorporated on 2022-11-02.Last packaged on 2025-10-14.
+This model was incorporated on 2022-11-02.Last packaged on 2026-10-13.
 
 ## Information
 ### Identifiers
@@ -35,18 +35,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos8a5g](https://hub.docker.com/r/ersiliaos/eos8a5g)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `508`
-- **Image Size (Mb):** `307.31`
+- **Image Size (Mb):** `462.76`
 
 **Computational Performance (seconds):**
-- 10 inputs: `28.89`
-- 100 inputs: `18.91`
-- 10000 inputs: `23.45`
+- 10 inputs: `30.25`
+- 100 inputs: `18.96`
+- 10000 inputs: `28.41`
 
 ### References
 - **Source Code**: [https://github.com/whitead/molbloom](https://github.com/whitead/molbloom)
