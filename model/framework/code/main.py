@@ -15,7 +15,9 @@ with open(input_file, "r") as f:
     smiles_list = [r[0] for r in reader]
     
 # run model
-outputs = [buy(smiles) for smiles in smiles_list ]
+# the filter stores canonical Kekule SMILES, so canonicalize (needs rdkit) or
+# aromatic input never matches
+outputs = [buy(smiles, canonicalize=True) for smiles in smiles_list]
 
 # write output in a .csv file
 with open(output_file, "w") as f:
