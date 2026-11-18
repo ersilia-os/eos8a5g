@@ -2,7 +2,8 @@
 
 Reports whether a molecule is purchasable by testing it against the in-stock subset of ZINC20, some 9.2 million compounds held as a Bloom filter rather than a database. Medina and White showed that hashing canonical SMILES into such a filter gives sub-millisecond, fully offline membership checks at a fraction of the storage a catalogue would need. The trade-off is one-sided, since a compound reported as absent is certainly absent, while one reported as available carries a measured false-positive rate of 0.0003.
 
-This model was incorporated on 2022-11-02.Last packaged on 2026-10-13.
+This model was incorporated on 2022-11-02.
+Last packaged on 2026-10-13.
 
 ## Information
 ### Identifiers
@@ -37,6 +38,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos8a5g](https://hub.docker.com/r/ersiliaos/eos8a5g)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a5g.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos8a5g_v2.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos8a5g_v2.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
